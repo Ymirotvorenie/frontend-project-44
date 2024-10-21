@@ -3,7 +3,7 @@ import { action, ROUND_COUNT } from "../src/engine.js";
 
 const MIN_NUM = 0;
 const MAX_NUM = 999;
-const TASK = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
+const TASK = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
 const startGame = () => {
     const gameData = [];
