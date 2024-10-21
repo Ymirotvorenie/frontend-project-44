@@ -13,7 +13,7 @@ const action = (task, gameData) => {
     console.log(`${task}\n`);
 
     for (const roundData of gameData) {
-        console.log(roundData[QUESTION_INDEX]);
+        console.log(`Question: ${roundData[QUESTION_INDEX]}`);
         const answer = readlineSync.question('Your answer: ');
 
         const result = roundData[ANSWER_INDEX] === answer;
