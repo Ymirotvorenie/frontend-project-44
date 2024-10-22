@@ -1,5 +1,5 @@
 import { getRandNum, generateProgression } from '../src/util.js';
-import { ROUND_COUNT, action } from '../src/engine.js';
+import run from '../src/engine.js';
 
 const MIN_SIZE = 8;
 const MAX_SIZE = 13;
@@ -30,14 +30,6 @@ const getRoundResult = () => {
   return [question, answer.toString()];
 };
 
-const startGame = () => {
-  const gameData = [];
-
-  for (let i = 0; i < ROUND_COUNT; i += 1) {
-    gameData.push(getRoundResult());
-  }
-
-  action(TASK, gameData);
+export default () => {
+  run({ task: TASK, gameFunc: getRoundResult });
 };
-
-export default startGame;

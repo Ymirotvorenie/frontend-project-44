@@ -28,4 +28,17 @@ const action = (task, gameData) => {
   console.log(`Congratulations, ${userName}!`);
 };
 
-export { action, ROUND_COUNT };
+export default (gameOptions) => {
+  const { task, gameFunc, roundCount = ROUND_COUNT } = gameOptions;
+
+  if (typeof gameFunc !== 'function') {
+    throw new Error('Function not found');
+  }
+  const gameResult = [];
+
+  for (let i = 0; i < roundCount; i += 1) {
+    gameResult.push(gameFunc());
+  }
+
+  action(task, gameResult);
+};

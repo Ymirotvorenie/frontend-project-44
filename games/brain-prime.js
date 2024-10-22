@@ -1,5 +1,5 @@
 import { getRandNum, isPrime } from '../src/util.js';
-import { action, ROUND_COUNT } from '../src/engine.js';
+import run from '../src/engine.js';
 
 const MIN_NUM = 0;
 const MAX_NUM = 999;
@@ -12,14 +12,6 @@ const getRoundResult = () => {
   return [number.toString(), answer];
 };
 
-const startGame = () => {
-  const gameData = [];
-
-  for (let i = 0; i < ROUND_COUNT; i += 1) {
-    gameData.push(getRoundResult());
-  }
-
-  action(TASK, gameData);
+export default () => {
+  run({ task: TASK, gameFunc: getRoundResult });
 };
-
-export default startGame;

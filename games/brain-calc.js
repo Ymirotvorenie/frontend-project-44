@@ -1,5 +1,5 @@
 import { getRandNum, calculate } from '../src/util.js';
-import { ROUND_COUNT, action } from '../src/engine.js';
+import run from '../src/engine.js';
 
 const OPERATORS = ['-', '+', '*'];
 const TASK = 'What is the result of the expression?';
@@ -17,14 +17,6 @@ const getRoundResult = () => {
   return [question, answer.toString()];
 };
 
-const startGame = () => {
-  const gameResult = [];
-
-  for (let i = 0; i < ROUND_COUNT; i += 1) {
-    gameResult.push(getRoundResult());
-  }
-
-  action(TASK, gameResult);
+export default () => {
+  run({ task: TASK, gameFunc: getRoundResult });
 };
-
-export default startGame;
