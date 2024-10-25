@@ -15,12 +15,12 @@ const getRoundResult = () => {
   const progressionSize = getRandNum(MIN_SIZE, MAX_SIZE);
   const progressionStep = getRandNum(MIN_STEP, MAX_STEP);
   const startPosition = getRandNum(MIN_START, MAX_START);
-  const skippingPosition = getRandNum(MIN_SKIP, progressionSize - 1);
+  const skipPositionIndex = getRandNum(MIN_SKIP, progressionSize - 1);
   const progression = generateProgression(progressionSize, startPosition, progressionStep);
 
-  const answer = progression[skippingPosition];
+  const answer = progression[skipPositionIndex];
 
-  progression[skippingPosition] = '..';
+  progression[skipPositionIndex] = '..';
   const question = progression.join(' ');
 
   return [question, answer.toString()];
