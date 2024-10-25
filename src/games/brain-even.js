@@ -1,5 +1,6 @@
-import { getRandNum, isEven } from '../src/util.js';
-import run from '../src/engine.js';
+import { isEven } from '../mathUtils.js';
+import { getRandNum } from '../util.js';
+import run from '../engine.js';
 
 const TASK = 'Answer "yes" if the number is even, otherwise answer "no"';
 const MAX_NUM = 999;

@@ -1,5 +1,3 @@
-import globals from 'globals';
-
 import path from 'path';
 import { fileURLToPath } from 'url';
 import { FlatCompat } from '@eslint/eslintrc';
@@ -17,10 +15,7 @@ const compat = new FlatCompat({
 export default [
   {
     languageOptions: {
-      globals: {
-        ...globals.node,
-        ...globals.jest,
-      },
+
       parserOptions: {
         // Eslint doesn't supply ecmaVersion in `parser.js` `context.parserOptions`
         // This is required to avoid ecmaVersion < 2015 error or 'import' / 'export' error

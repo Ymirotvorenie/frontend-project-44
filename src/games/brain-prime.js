@@ -1,5 +1,6 @@
-import { getRandNum, isPrime } from '../src/util.js';
-import run from '../src/engine.js';
+import { isPrime } from '../mathUtils.js';
+import { getRandNum } from '../util.js';
+import run from '../engine.js';
 
 const MIN_NUM = 0;
 const MAX_NUM = 999;

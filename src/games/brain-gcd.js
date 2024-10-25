@@ -1,5 +1,6 @@
-import { getRandNum, getGCD } from '../src/util.js';
-import run from '../src/engine.js';
+import { getGCD } from '../mathUtils.js';
+import { getRandNum } from '../util.js';
+import run from '../engine.js';
 
 const TASK = 'Find the greatest common divisor of given numbers.';
 const MAX_NUM = 500;

@@ -1,5 +1,6 @@
-import { getRandNum, calculate } from '../src/util.js';
-import run from '../src/engine.js';
+import { calculate } from '../mathUtils.js';
+import { getRandNum } from '../util.js';
+import run from '../engine.js';
 
 const OPERATORS = ['-', '+', '*'];
 const TASK = 'What is the result of the expression?';

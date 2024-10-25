@@ -1,7 +1,7 @@
 {
   "name": "@hexlet/code",
   "version": "1.0.0",
-  "description": "[![Actions Status](https://github.com/Ymirotvorenie/frontend-project-44/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/Ymirotvorenie/frontend-project-44/actions)",
+  "description": "Five console games dedicated to Math. Enter game name and enjoy. To win, you need to answer 3 questions correctly. If you answer incorrectly, you wil be defeated. To start over - run the application again.",
   "type": "module",
   "main": "index.js",
   "scripts": {
@@ -15,7 +15,7 @@
     "brain-progression": "bin/brain-progression.js",
     "brain-prime": "bin/brain-prime.js"
   },
-  "author": "",
+  "author": "https://github.com/Ymirotvorenie",
   "license": "ISC",
   "dependencies": {
     "readline-sync": "^1.4.10"
@@ -24,7 +24,6 @@
     "@eslint/js": "^8.57.0",
     "eslint": "^8.57.0",
     "eslint-config-airbnb": "^19.0.4",
-    "eslint-plugin-import": "^2.31.0",
-    "globals": "^15.11.0"
+    "eslint-plugin-import": "^2.31.0"
   }
 }

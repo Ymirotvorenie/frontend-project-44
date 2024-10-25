@@ -21,11 +21,11 @@ make install
 ```
 ### **Запуск игр**
 ```
-brain-calc
-brain-even
-brain-gcd
-brain-progression
-brain-prime
+make brain-calc
+make brain-even
+make brain-gcd
+make brain-progression
+make brain-prime
 ```
 
 
