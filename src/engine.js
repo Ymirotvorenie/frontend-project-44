@@ -4,7 +4,7 @@ const ROUND_COUNT = 3;
 const QUESTION_INDEX = 0;
 const ANSWER_INDEX = 1;
 
-const action = (task, gameData) => {
+const initiate = (task, gameData) => {
   console.log('Welcome to the Brain Games!\n');
   const userName = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${userName}\n`);
@@ -29,16 +29,16 @@ const action = (task, gameData) => {
 };
 
 export default (gameOptions) => {
-  const { task, gameFunc, roundCount = ROUND_COUNT } = gameOptions;
+  const { task, runGame, roundCount = ROUND_COUNT } = gameOptions;
 
-  if (typeof gameFunc !== 'function') {
+  if (typeof runGame !== 'function') {
     throw new Error('Function not found');
   }
   const gameResult = [];
 
   for (let i = 0; i < roundCount; i += 1) {
-    gameResult.push(gameFunc());
+    gameResult.push(runGame());
   }
 
-  action(task, gameResult);
+  initiate(task, gameResult);
 };

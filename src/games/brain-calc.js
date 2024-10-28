@@ -1,11 +1,19 @@
-import { calculate } from '../mathUtils.js';
-import { getRandNum } from '../util.js';
+import getRandNum from '../util.js';
 import run from '../engine.js';
 
 const OPERATORS = ['-', '+', '*'];
 const TASK = 'What is the result of the expression?';
 const MAX_NUM = 100;
 const MIN_NUM = 0;
+
+const calculate = (operator, num1, num2) => {
+  switch (operator) {
+    case '-': return num1 - num2;
+    case '+': return num1 + num2;
+    case '*': return num1 * num2;
+    default: return `"${operator}" operation not supported`;
+  }
+};
 
 const getRoundResult = () => {
   const num1 = getRandNum(MIN_NUM, MAX_NUM);
@@ -19,5 +27,5 @@ const getRoundResult = () => {
 };
 
 export default () => {
-  run({ task: TASK, gameFunc: getRoundResult });
+  run({ task: TASK, runGame: getRoundResult });
 };

@@ -1,10 +1,11 @@
-import { getGCD } from '../mathUtils.js';
-import { getRandNum } from '../util.js';
+import getRandNum from '../util.js';
 import run from '../engine.js';
 
 const TASK = 'Find the greatest common divisor of given numbers.';
 const MAX_NUM = 500;
 const MIN_NUM = 0;
+
+const getGCD = (a, b) => (b === 0 ? a : getGCD(b, a % b));
 
 const getRoundResult = () => {
   const num1 = getRandNum(MIN_NUM, MAX_NUM);
@@ -17,5 +18,5 @@ const getRoundResult = () => {
 };
 
 export default () => {
-  run({ task: TASK, gameFunc: getRoundResult });
+  run({ task: TASK, runGame: getRoundResult });
 };

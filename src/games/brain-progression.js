@@ -1,5 +1,4 @@
-import { generateProgression } from '../mathUtils.js';
-import { getRandNum } from '../util.js';
+import getRandNum from '../util.js';
 import run from '../engine.js';
 
 const MIN_SIZE = 8;
@@ -10,6 +9,14 @@ const MIN_START = 0;
 const MAX_START = 500;
 const MIN_SKIP = 0;
 const TASK = 'What number is missing in the progression?';
+
+const generateProgression = (size, start, step) => {
+  const progression = [];
+  for (let i = 0; i < size; i += 1) {
+    progression[i] = (start + step * i);
+  }
+  return progression;
+};
 
 const getRoundResult = () => {
   const progressionSize = getRandNum(MIN_SIZE, MAX_SIZE);
@@ -27,5 +34,5 @@ const getRoundResult = () => {
 };
 
 export default () => {
-  run({ task: TASK, gameFunc: getRoundResult });
+  run({ task: TASK, runGame: getRoundResult });
 };
